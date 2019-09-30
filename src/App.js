@@ -1,8 +1,23 @@
 import React from 'react';
-import './App.css';
+import careerPath from './services/careerPath'; 
+
 
 class App extends React.Component {
- 
+  constructor(props) {
+    super(props);
+    this.state = {
+      careerInfo: {}
+    };
+  }
+
+  componentDidMount(){
+      this.getCareerInfo()
+  }
+
+  getCareerInfo = () => {
+    careerPath()
+    .then(data => console.log(data))
+  }
 
   render() {
     return (
