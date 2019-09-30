@@ -16,7 +16,12 @@ class App extends React.Component {
 
   getCareerInfo = () => {
     careerPath()
-    .then(data => console.log(data))
+    .then(data => {
+      this.setState({
+        serverData: data
+      })
+      console.log(data)
+    })
   }
 
   render() {
