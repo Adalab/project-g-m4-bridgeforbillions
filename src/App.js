@@ -1,4 +1,5 @@
 import React from 'react';
+import 'antd/dist/antd.css';
 import careerPath from './services/careerPath';
 import Attributes from './components/Attributes';
 
