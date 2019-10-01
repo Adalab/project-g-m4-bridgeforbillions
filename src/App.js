@@ -10,24 +10,14 @@ class App extends React.Component {
     this.state = {
       careerInfo: [],
       levelSelected: '',
-      attributeSelected: {},
-      categoryChecked: false,
+      attributeSelected: '', // selected "newid"
     };
-    this.getAttributeId = this.getAttributeId.bind(this);
-    this.getLevelInfo = this.getLevelInfo.bind(this);
+    this.selectAttribute = this.selectAttribute.bind(this);
+    this.setLevelInfo = this.setLevelInfo.bind(this);
   }
 
   componentDidMount() {
     this.getCareerInfo();
-  }
-
-  getAttributeId(event) {
-    const currentAttributeId = parseInt(event.currentTarget.id);
-    const attributeObject = this.state.careerInfo.find((item) => item.newid === currentAttributeId);
-    this.setState({
-      attributeSelected: attributeObject,
-      categoryChecked: true
-    });
   }
 
   getCareerInfo() {
@@ -42,26 +32,39 @@ class App extends React.Component {
       });
   }
 
-  getLevelInfo(value) {
+  setLevelInfo(value) {
+    const { attributeSelected, careerInfo } = this.state;
+    const attribute = careerInfo.find((career) => career.newid === attributeSelected);
+
+    attribute.currentValue = value;
+
     this.setState({
-      levelSelected: value
+      careerInfo: [...careerInfo]
+    });
+  }
+
+  selectAttribute(event) {
+    const currentAttributeId = parseInt(event.currentTarget.id, 10);
+    const attributeObject = this.state.careerInfo.find((item) => item.newid === currentAttributeId);
+
+    this.setState({
+      attributeSelected: attributeObject.newid
     });
   }
 
   render() {
     const { careerInfo, levelSelected, attributeSelected, categoryChecked } = this.state;
+    const attribute = careerInfo.find((career) => career.newid === attributeSelected);
+
     return (
       <div className="App">
         <Attributes
           careerInfo={careerInfo}
-          levelSelected={levelSelected}
-          getAttributeId={this.getAttributeId}
+          getAttributeId={this.selectAttribute}
         />
         <Description
-          attributeSelected={attributeSelected}
-          categoryChecked={categoryChecked}
-          getLevelInfo={this.getLevelInfo}
-          levelSelected={levelSelected}
+          attributeSelected={attribute}
+          getLevelInfo={this.setLevelInfo}
         />
       </div>
     );
