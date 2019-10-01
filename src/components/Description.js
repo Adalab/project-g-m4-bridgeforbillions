@@ -3,11 +3,11 @@ import Level from './Level';
 import LevelInfo from './LevelInfo';
 
 const Description = (props) => {
-  const { attributeSelected, isChecked } = props;
+  const { attributeSelected, categoryChecked } = props;
 
   return (
     <div>
-      {isChecked ? (
+      {categoryChecked ? (
         <div>
           <h3>2: Rank (TBD)</h3>
           <h2>{attributeSelected.displayName}</h2>
