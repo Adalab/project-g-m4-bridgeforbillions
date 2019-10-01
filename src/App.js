@@ -45,10 +45,9 @@ class App extends React.Component {
 
   selectAttribute(event) {
     const currentAttributeId = parseInt(event.currentTarget.id, 10);
-    const attribute = this.findCareerById(currentAttributeId);
 
     this.setState({
-      attributeSelected: attribute.newid
+      attributeSelected: currentAttributeId
     });
   }
 
