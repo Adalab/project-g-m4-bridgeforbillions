@@ -4,18 +4,26 @@ import careerPath from './services/careerPath';
 import Description from './components/Description';
 import Attributes from './components/Attributes';
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       careerInfo: [],
-      levelSelected: ''
+      levelSelected: '',
+      attributeSelected: 2
     };
+    this.getAttributeId = this.getAttributeId.bind(this);
   }
 
   componentDidMount() {
     this.getCareerInfo();
+  }
+
+  getAttributeId(event) {
+    const currentAttributeId = parseInt(event.currentTarget.id);
+    this.setState({
+      attributeSelected: currentAttributeId
+    });
   }
 
   getCareerInfo() {
@@ -31,16 +39,18 @@ class App extends React.Component {
   }
 
   render() {
-    const { careerInfo, levelSelected } = this.state;
+    const { careerInfo, levelSelected, attributeSelected } = this.state;
     return (
       <div className="App">
-		<Attributes
-          	careerInfo={careerInfo}
-          	levelSelected={levelSelected}
+        <Attributes
+          careerInfo={careerInfo}
+          levelSelected={levelSelected}
+          getAttributeId={this.getAttributeId}
         />
-		<Description 
-			careerInfo={careerInfo} 
-		/>
+        <Description
+          careerInfo={careerInfo}
+          attributeSelected={attributeSelected}
+        />
       </div>
     );
   }
