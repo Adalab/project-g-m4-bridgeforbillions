@@ -1,12 +1,14 @@
 import React from 'react';
 import careerPath from './services/careerPath';
+import Description from './components/Description';
+import 'antd/dist/antd.css';
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      careerInfo: {}
+      careerInfo: []
     };
   }
 
@@ -24,9 +26,10 @@ class App extends React.Component {
   }
 
   render() {
+    const { careerInfo } = this.state;
     return (
       <div className="App">
-        :)
+        <Description careerInfo={careerInfo} />
       </div>
     );
   }
