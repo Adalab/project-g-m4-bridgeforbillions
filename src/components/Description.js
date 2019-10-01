@@ -3,21 +3,23 @@ import Level from './Level';
 import LevelInfo from './LevelInfo';
 
 const Description = (props) => {
-    const { attributeSelected, categoryChecked, getLevelInfo, levelSelected } = props;
-    return (
-      <div className="description__container">
-        {categoryChecked ? (
-          <div className="description__info">
+  const { attributeSelected, categoryChecked, getLevelInfo, levelSelected } = props;
+  return (
+    <div className="description__container">
+      {categoryChecked ? (
+        <div className="description__info">
           <h3 className="description__subtitle">2: Rank (TBD)</h3>
           <h2 className="description__title">{attributeSelected.displayName}</h2>
           <p className="description__text">{attributeSelected.description}</p>
           <div className="description__level__container">
-              <Level getLevelInfo={getLevelInfo} levelSelected={levelSelected} />
-              <div className="levelInfo">
-              {attributeSelected.milestones.map(milestone => {
-                return (
-                  <React.Fragment>
-                      <p className="levelInfo__summary">{milestone.summary}</p>
+            <Level getLevelInfo={getLevelInfo} levelSelected={levelSelected} />
+            <div className="levelInfo">
+              {attributeSelected.milestones
+                .filter(milstone => milstone.level.includes(levelSelected))
+                .map(milestone => {
+                  return (
+                    <React.Fragment>
+                    <p className="levelInfo__summary">{milestone.summary}</p>
                       <h4 className="levelInfo__behaviors">Examples behaviors</h4>
                       <ul className="levelInfo__behavior-list">
                       {milestone.signals.map((signal, index) => {
