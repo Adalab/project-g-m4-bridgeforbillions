@@ -45,16 +45,22 @@ class App extends React.Component {
 
   selectAttribute(event) {
     const currentAttributeId = parseInt(event.currentTarget.id, 10);
-    const attributeObject = this.state.careerInfo.find((item) => item.newid === currentAttributeId);
+    const attribute = this.findCareerById(currentAttributeId);
 
     this.setState({
       attributeSelected: attributeObject.newid
     });
   }
 
+  findCareerById(id) {
+    const { careerInfo } = this.state;
+
+    return careerInfo.find((career) => career.newid === id);
+  }
+
   render() {
-    const { careerInfo, levelSelected, attributeSelected, categoryChecked } = this.state;
-    const attribute = careerInfo.find((career) => career.newid === attributeSelected);
+    const { careerInfo, attributeSelected } = this.state;
+    const attribute = this.findCareerById(attributeSelected);
 
     return (
       <div className="App">
