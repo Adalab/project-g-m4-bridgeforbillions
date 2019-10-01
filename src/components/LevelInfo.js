@@ -2,26 +2,34 @@ import React from 'react';
 
 
 const LevelInfo = (props) => {
-  const { milstone } = props;
+  const { milestones } = props;
   return (
     <div>
-      <p>{milstone.summary}</p>
-      <p>Examples behaviors</p>
-      <ul>
-        {milstone.signals.map((signal, index) => {
-          return (
-            <li key={index}>{signal}</li>
-          );
-        })}
-      </ul>
-      <p>Examples Tasks</p>
-      <ul>
-        {milstone.examples.map((example, index) => {
-          return (
-            <li key={index}>{example}</li>
-          );
-        })}
-      </ul>
+      {milestones.map(milestone => {
+        return (
+          <>
+            <p>{milestone.summary}</p>
+            <p>Examples behaviors</p>
+            <ul>
+              {milestone.signals.map((signal, index) => {
+                return (
+                  <li key={index}>{signal}</li>
+                );
+              })}
+            </ul>
+            <p>Examples Tasks</p>
+            <ul>
+              {milestone.examples.map((example, index) => {
+                return (
+                  <li key={index}>{example}</li>
+                );
+              })}
+            </ul>
+          </>
+        )
+
+      })};
+
     </div>
   );
 };
