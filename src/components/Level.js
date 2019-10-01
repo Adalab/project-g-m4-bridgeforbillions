@@ -1,8 +1,8 @@
 import React from 'react';
 import { Slider } from 'antd';
 
-const Level = (props) => {
-	const marks = {
+const Level = () => {
+  const marks = {
     0: 0,
     1: 1,
     2: 2,
@@ -14,7 +14,7 @@ const Level = (props) => {
         color: '#f50',
       },
       max: 5,
-      dots: true
+	  dots: true
     },
   };
   return (
