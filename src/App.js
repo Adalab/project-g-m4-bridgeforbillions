@@ -1,5 +1,5 @@
 import React from 'react';
-import careerPath from './services/careerPath'; 
+import careerPath from './services/careerPath';
 
 
 class App extends React.Component {
@@ -10,24 +10,23 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount(){
-      this.getCareerInfo()
+  componentDidMount() {
+    this.getCareerInfo();
   }
 
-  getCareerInfo = () => {
+  getCareerInfo() {
     careerPath()
-    .then(data => {
-      this.setState({
-        serverData: data
-      })
-      console.log(data)
-    })
+      .then((data) => {
+        this.setState({
+          careerInfo: data
+        });
+      });
   }
 
   render() {
     return (
       <div className="App">
-
+        :)
       </div>
     );
   }
