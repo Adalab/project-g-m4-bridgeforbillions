@@ -3,7 +3,7 @@ import Level from './Level';
 import LevelInfo from './LevelInfo';
 
 const Description = (props) => {
-    const { attributeSelected, categoryChecked } = props;
+    const { attributeSelected, categoryChecked, getLevelInfo, levelSelected } = props;
     return (
       <div className="description__container">
         {categoryChecked ? (
@@ -12,7 +12,7 @@ const Description = (props) => {
           <h2 className="description__title">{attributeSelected.displayName}</h2>
           <p className="description__text">{attributeSelected.description}</p>
           <div className="description__level__container">
-              <Level />
+              <Level getLevelInfo={getLevelInfo} levelSelected={levelSelected} />
               <div className="levelInfo">
               {attributeSelected.milestones.map(milestone => {
                 return (

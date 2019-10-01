@@ -11,9 +11,10 @@ class App extends React.Component {
       careerInfo: [],
       levelSelected: '',
       attributeSelected: {},
-      categoryChecked: false
+      categoryChecked: false,
     };
     this.getAttributeId = this.getAttributeId.bind(this);
+    this.getLevelInfo = this.getLevelInfo.bind(this);
   }
 
   componentDidMount() {
@@ -41,6 +42,12 @@ class App extends React.Component {
       });
   }
 
+  getLevelInfo(value) {
+    this.setState({
+      levelSelected: value
+    });
+  }
+
   render() {
     const { careerInfo, levelSelected, attributeSelected, categoryChecked } = this.state;
     return (
@@ -53,6 +60,8 @@ class App extends React.Component {
         <Description
           attributeSelected={attributeSelected}
           categoryChecked={categoryChecked}
+          getLevelInfo={this.getLevelInfo}
+          levelSelected={levelSelected}
         />
       </div>
     );
