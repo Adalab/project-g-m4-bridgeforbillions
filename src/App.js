@@ -19,8 +19,11 @@ class App extends React.Component {
   getCareerInfo() {
     careerPath()
       .then((data) => {
+        const newData = data.map((item, index) => {
+          return { ...item, newid: index + 1 };
+        });
         this.setState({
-          careerInfo: data
+          careerInfo: newData
         });
       });
   }
