@@ -3,54 +3,51 @@ import Level from './Level';
 import LevelInfo from './LevelInfo';
 
 const Description = (props) => {
-  const { attributeSelected, categoryChecked } = props;
-
-  return (
-    <div>
-      {categoryChecked ? (
-        <div>
-          <h3>2: Rank (TBD)</h3>
-          <h2>{attributeSelected.displayName}</h2>
-          <p>{attributeSelected.description}</p>
-
-          <div>
-            <Level />
-            <div>
+    const { attributeSelected, categoryChecked } = props;
+    return (
+      <div className="description__container">
+        {categoryChecked ? (
+          <div className="description__info">
+          <h3 className="description__subtitle">2: Rank (TBD)</h3>
+          <h2 className="description__title">{attributeSelected.displayName}</h2>
+          <p className="description__text">{attributeSelected.description}</p>
+          <div className="description__level__container">
+              <Level />
+              <div className="levelInfo">
               {attributeSelected.milestones.map(milestone => {
                 return (
-                  <>
-                    <p>{milestone.summary}</p>
-                    <p>Examples behaviors</p>
-                    <ul>
+                  <React.Fragment>
+                      <p className="levelInfo__summary">{milestone.summary}</p>
+                      <h4 className="levelInfo__behaviors">Examples behaviors</h4>
+                      <ul className="levelInfo__behavior-list">
                       {milestone.signals.map((signal, index) => {
                         return (
-                          <li key={index}>{signal}</li>
-                        );
-                      })}
+                          <li className="levelInfo__behavior-item" key={index}>{signal}</li>
+                            );
+                        })}
                     </ul>
-                    <p>Examples Tasks</p>
-                    <ul>
-                      {milestone.examples.map((example, index) => {
-                        return (
-                          <li key={index}>{example}</li>
-                        );
-                      })}
-                    </ul>
-                  </>
-                );
+                      <h4 className="levelInfo__tasks">Examples Tasks</h4>
+                      <ul className="levelInfo__task-list">
+                          {milestone.examples.map((example, index) => {
+                            return (
+                              <li className="levelInfo__task-item" key={index}>{example}</li>
+                                );
+                            })}
+                        </ul>
+                    </React.Fragment>
+                            );
               })}
             </div>
-            {/* <LevelInfo 
-          milestones={attributeSelected.milestones}
-        /> */}
-          </div>
-
+              {/* <LevelInfo 
+                            milestones={attributeSelected.milestones}
+                        /> */}
+            </div>
         </div>
-      )
-        : 'elige un botón'}
-    </div>
-
-  );
-};
-
-export default Description;
+) : 'elige un botón'}
+                        
+      </div>
+                        
+                        );
+                    };
+                    
+                    export default Description;
