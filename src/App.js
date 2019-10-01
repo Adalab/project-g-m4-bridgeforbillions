@@ -1,12 +1,15 @@
 import React from 'react';
+import 'antd/dist/antd.css';
 import careerPath from './services/careerPath';
+import Attributes from './components/Attributes';
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      careerInfo: {}
+      careerInfo: [],
+      levelSelected: ''
     };
   }
 
@@ -17,16 +20,23 @@ class App extends React.Component {
   getCareerInfo() {
     careerPath()
       .then((data) => {
+        const newData = data.map((item, index) => {
+          return { ...item, newid: index + 1 };
+        });
         this.setState({
-          careerInfo: data
+          careerInfo: newData
         });
       });
   }
 
   render() {
+    const { careerInfo, levelSelected } = this.state;
     return (
       <div className="App">
-        :)
+        <Attributes
+          careerInfo={careerInfo}
+          levelSelected={levelSelected}
+        />
       </div>
     );
   }
