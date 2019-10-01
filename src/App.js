@@ -34,13 +34,13 @@ class App extends React.Component {
     const { careerInfo, levelSelected } = this.state;
     return (
       <div className="App">
-		<Description 
-			careerInfo={careerInfo} 
-		/>
-        <Attributes
+		<Attributes
           	careerInfo={careerInfo}
           	levelSelected={levelSelected}
         />
+		<Description 
+			careerInfo={careerInfo} 
+		/>
       </div>
     );
   }
