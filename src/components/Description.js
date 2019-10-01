@@ -18,7 +18,7 @@ const Description = (props) => {
                 .filter(milstone => milstone.level.includes(levelSelected))
                 .map(milestone => {
                   return (
-                    <Fragment>
+                    <React.Fragment>
                       <p className="levelInfo__summary">{milestone.summary}</p>
                       <h4 className="levelInfo__behaviors">Examples behaviors</h4>
                       <ul className="levelInfo__behavior-list">
@@ -36,16 +36,26 @@ const Description = (props) => {
                           );
                         })}
                       </ul>
-                    </Fragment>
+                    </React.Fragment>
                   );
                 })}
             </div>
           </div>
         </div>
-      ) : 'elige un botón'}
+      ) : (
+          <React.Fragment>
+            <h3 className="description__subtitle">2: Rank (TBD)</h3>
+            <h2 className="description__title">0</h2>
+            <p className="description__text">You have a lot to learn</p>
+            <div className="description__level__container">
+              <Level getLevelInfo='0' levelSelected='0' />  
+              </div>
+        </React.Fragment>
 
-    </div>                
-  );
-};
-                    
+            )}
+      
+    </div>
+        );
+      };
+                          
 export default Description;
