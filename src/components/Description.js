@@ -33,10 +33,19 @@ const Description = (props) => {
                 return (
                   <div>
                     <p>{milstone.summary}</p>
+                    <p>Examples behaviors</p>
                     <ul>
-                      {milstone.signals.map((signal) => {
+                      {milstone.signals.map((signal, index) => {
                         return (
-                          <li>{signal}</li>
+                          <li key={index}>{signal}</li>
+                        );
+                      })}
+                    </ul>
+                    <p>Examples Tasks</p>
+                    <ul>
+                      {milstone.examples.map((example, index) => {
+                        return (
+                          <li key={index}>{example}</li>
                         );
                       })}
                     </ul>
