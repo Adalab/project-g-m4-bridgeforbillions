@@ -1,7 +1,8 @@
 import React from 'react';
 import { Slider } from 'antd';
 
-const Level = () => {
+const Level = (props) => {
+  const { getLevelInfo, levelSelected } = props;
   const marks = {
     0: 0,
     1: 1,
@@ -14,12 +15,13 @@ const Level = () => {
         color: '#f50',
       },
       max: 5,
-	  dots: true
+	    dots: true
     },
   };
+
   return (
     <div>
-      <Slider marks={marks} defaultValue={0} />
+      <Slider marks={marks} value={levelSelected} onChange={getLevelInfo} />
     </div>
   );
 };
