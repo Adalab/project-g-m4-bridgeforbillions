@@ -7,6 +7,7 @@ const Attributes = (props) => {
   const { careerInfo, levelSelected } = props;
   return (
     <div className="attributes__container">
+      <h2 className="attributes__title">1: Select an area (TBD)</h2>
       <ul className="attributes__list">
         {careerInfo.map((item) => { 
           return (
