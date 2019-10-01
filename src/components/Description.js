@@ -9,7 +9,8 @@ const Description = (props) => {
     2: 2,
     3: 3,
     4: 4,
-    5: {
+    5: 5,
+    6: {
       style: {
         color: '#f50',
       },
@@ -19,6 +20,7 @@ const Description = (props) => {
   };
   return (
     <div>
+      <Slider marks={marks} defaultValue={0} />
       {careerInfo.map(info => {
         return (
           <div>
@@ -27,8 +29,20 @@ const Description = (props) => {
               <p>{info.description}</p>
             </div>
             <div>
-              <Slider marks={marks} defaultValue={0} />
-              <Slider range marks={marks} defaultValue={[0, 5]} />
+              {info.milestones.map((milstone) => {
+                return (
+                  <div>
+                    <p>{milstone.summary}</p>
+                    <ul>
+                      {milstone.signals.map((signal) => {
+                        return (
+                          <li>{signal}</li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                )
+              })}
             </div>
           </div>
         );
