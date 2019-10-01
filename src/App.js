@@ -34,7 +34,7 @@ class App extends React.Component {
 
   setLevelInfo(value) {
     const { attributeSelected, careerInfo } = this.state;
-    const attribute = careerInfo.find((career) => career.newid === attributeSelected);
+    const attribute = this.findCareerById(attributeSelected);
 
     attribute.currentValue = value;
 
@@ -48,7 +48,7 @@ class App extends React.Component {
     const attribute = this.findCareerById(currentAttributeId);
 
     this.setState({
-      attributeSelected: attributeObject.newid
+      attributeSelected: attribute.newid
     });
   }
 
