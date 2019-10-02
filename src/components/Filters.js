@@ -15,7 +15,7 @@ const Filters = () => {
         style={{ width: 200 }}
         placeholder="Choose your job title"
         id="job__filter"
-        className="filter__input"
+        className="filter__input-job"
       >
         <Option value="Job 1">Job 1</Option>
         <Option value="Job 2">Job 2</Option>

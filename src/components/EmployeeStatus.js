@@ -1,16 +1,20 @@
 import React from 'react';
+import { Typography } from 'antd';
 import Filters from './Filters';
 import Results from './Results';
 import { Col, Row } from 'antd';
+import './../styles/employeeStatus.css';
 
 
 const EmployeeSatatus = () => {
+  const { Title } = Typography;
+
   return (
     <div className="employeeStatus__container">
       <Row>
         <Col span={24}>
           <div className="page__description__container">
-            <h2 className="page__title">Tealify</h2>
+            <Title className="page__title" level={2}>Tealify</Title>
             <ul className="description__list">
               <li className="list__item"> Tealify is a transparency tool to define career paths in Tech teams. </li>
               <li className="list__item">  By selecting each area, grouped in categories, the user can inspect the different levels of expertise (ranked from 0 to 5 points). Each level represents a list of expected behaviours and tasks. </li>
