@@ -9,7 +9,7 @@ const GeneralStatus = (props) => {
   const { attributeObject, getLevelInfo, defaultObject, careerInfo, getAttributeId } = props;
 
   return (
-    <div className="grid__general-status">
+    <div className="generalStatus__container">
       <Row>
         <Col span={6}>
           <Attributes
