@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import careerPath from './services/careerPath';
 import Description from './components/Description';
 import Attributes from './components/Attributes';
+import Header from './components/Header';
 
 class App extends React.Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Header />
         <Attributes
           careerInfo={careerInfo}
           attributeObject={attributeObject}
