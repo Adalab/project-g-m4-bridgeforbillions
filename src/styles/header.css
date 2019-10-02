@@ -17,5 +17,8 @@
     align-items: center;
 }
 .ant-page-header.header__title {
-    padding: 15px 0px;
+	position: fixed;
+	min-width: 100vw;
+	padding: 15px 0px;
+	z-index: 1;
 }
