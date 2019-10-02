@@ -1,38 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const LevelInfo = (props) => {
-  const { milestones } = props;
+  const { milestone, attributeObject } = props;
+
   return (
     <div>
-      {milestones.map(milestone => {
-        return (
-          <>
-            <p>{milestone.summary}</p>
-            <p>Examples behaviors</p>
-            <ul>
-              {milestone.signals.map((signal, index) => {
-                return (
-                  <li key={index}>{signal}</li>
-                );
-              })}
-            </ul>
-            <p>Examples Tasks</p>
-            <ul>
-              {milestone.examples.map((example, index) => {
-                return (
-                  <li key={index}>{example}</li>
-                );
-              })}
-            </ul>
-          </>
-        )
-
-      })};
-
+      <div className="levelInfo__number">{attributeObject.currentLevel}</div>
+      <p className="levelInfo__summary">{milestone.summary}</p>
+      <h4 className="levelInfo__behaviors">Examples behaviors</h4>
+      <ul className="levelInfo__behavior-list">
+        {milestone.signals.map((signal, index) => {
+          return (
+            <li className="levelInfo__behavior-item" key={index}>{signal}</li>
+          );
+        })}
+      </ul>
+      <h4 className="levelInfo__tasks">Examples Tasks</h4>
+      <ul className="levelInfo__task-list">
+        {milestone.examples.map((example, index) => {
+          return (
+            <li className="levelInfo__task-item" key={index}>{example}</li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
 
+LevelInfo.propTypes = {
+  milestone: PropTypes.object.isRequired,
+  attributeObject: PropTypes.object.isRequired
+};
 
-export default LevelInfo; 
+export default LevelInfo;

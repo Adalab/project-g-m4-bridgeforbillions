@@ -12,6 +12,7 @@ class App extends React.Component {
       attributeId: 1,
       defaultObject: {}
     };
+
     this.getAttributeId = this.getAttributeId.bind(this);
     this.getLevelInfo = this.getLevelInfo.bind(this);
   }
@@ -22,6 +23,7 @@ class App extends React.Component {
 
   getAttributeId(event) {
     const currentAttributeId = parseInt(event.currentTarget.id);
+
     this.setState({
       attributeId: currentAttributeId,
       categoryChecked: true
@@ -34,6 +36,7 @@ class App extends React.Component {
         const newData = data.map((item, index) => {
           return { ...item, newid: index + 1, currentLevel: 0 };
         });
+
         this.setState({
           careerInfo: newData,
           defaultObject: newData[0]
@@ -45,6 +48,7 @@ class App extends React.Component {
     const { careerInfo, attributeId } = this.state;
     const attributeLevel = careerInfo.find((item) => item.newid === attributeId);
     attributeLevel.currentLevel = value;
+
     this.setState({
       careerInfo: [...careerInfo]
     });
@@ -52,7 +56,6 @@ class App extends React.Component {
 
   render() {
     const { careerInfo, attributeId, defaultObject } = this.state;
-
     const attributeObject = careerInfo.find((item) => item.newid === attributeId);
 
     return (
