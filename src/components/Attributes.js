@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './../styles/attributes.css';
 
 const Attributes = (props) => {
-  const { careerInfo, getAttributeId, attributeObject } = props;
+  const { careerInfo, getAttributeId } = props;
   return (
     <div className="attributes__container">
       <h2 className="attributes__title">1: Select an area (TBD)</h2>
@@ -24,7 +24,7 @@ const Attributes = (props) => {
 
 Attributes.propTypes = {
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
-  levelSelected: PropTypes.string.isRequired
+  getAttributeId: PropTypes.func.isRequired
 };
 
-export default Attributes; 
+export default Attributes;

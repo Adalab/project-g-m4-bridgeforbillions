@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Slider } from 'antd';
 
 const Level = (props) => {
@@ -14,9 +15,14 @@ const Level = (props) => {
 
   return (
     <div>
-      <Slider marks={marks} value={levelSelected|| 0} onChange={getLevelInfo} max={5} defaultValue={0}/>
+      <Slider marks={marks} value={levelSelected || 0} onChange={getLevelInfo} max={5} defaultValue={0} />
     </div>
   );
 };
 
-export default Level; 
+Level.propTypes = {
+  getLevelInfo: PropTypes.func.isRequired,
+  levelSelected: PropTypes.number
+};
+
+export default Level;

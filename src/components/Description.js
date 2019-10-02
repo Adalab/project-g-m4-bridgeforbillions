@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Level from './Level';
 import LevelInfo from './LevelInfo';
 
+
 const Description = (props) => {
   const { attributeObject, getLevelInfo, defaultObject } = props;
+
   return (
     <div className="description__container">
       {attributeObject ? (
@@ -36,6 +39,12 @@ const Description = (props) => {
       )}
     </div>
   );
+};
+
+Description.propTypes = {
+  attributeObject: PropTypes.object,
+  getLevelInfo: PropTypes.func.isRequired,
+  defaultObject: PropTypes.object.isRequired
 };
 
 export default Description;

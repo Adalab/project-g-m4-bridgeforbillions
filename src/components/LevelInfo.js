@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const LevelInfo = (props) => {
   const { milestone, attributeObject } = props;
+
   return (
     <div>
       <div className="levelInfo__number">{attributeObject.currentLevel}</div>
@@ -27,5 +29,9 @@ const LevelInfo = (props) => {
   );
 };
 
+LevelInfo.propTypes = {
+  milestone: PropTypes.object.isRequired,
+  attributeObject: PropTypes.object.isRequired
+};
 
-export default LevelInfo; 
+export default LevelInfo;
