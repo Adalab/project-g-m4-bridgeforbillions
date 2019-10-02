@@ -7,7 +7,7 @@ const Filters = () => {
   return (
     <div className="filter__container">
       <label className="filter__label" htmlFor="name__filter">Your name</label>
-      <Input id="name__filter" placeholder="Enter your name" className="filter__input" />
+      <Input id="name__filter" placeholder="Enter your name" className="filter__input-name" />
 
       <label className="filter__label" htmlFor="job__filter">Your job title</label>
       <Select
