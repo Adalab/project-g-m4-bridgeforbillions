@@ -4,6 +4,7 @@ import Filters from './Filters';
 import Results from './Results';
 import { Col, Row } from 'antd';
 import './../styles/employeeStatus.css';
+import { Progress } from 'antd';
 
 
 const EmployeeSatatus = () => {
@@ -31,6 +32,15 @@ const EmployeeSatatus = () => {
           <Results />
         </Col>
       </Row>
+      <Progress className="employee-status__line"
+        strokeColor={{
+          '0%': '#108ee9',
+          '100%': '#87d068',
+        }}
+        percent={100} 
+        showInfo={false} 
+        strokeWidth={2}
+      />
     </div>
   );
 };
