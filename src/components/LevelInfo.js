@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './../styles/levelInfo.css';
 
 
 const LevelInfo = (props) => {
@@ -7,7 +8,7 @@ const LevelInfo = (props) => {
 
   return (
     <div>
-      <div className="levelInfo__number">{attributeObject.currentLevel}</div>
+      <div className={`levelInfo__number--${attributeObject.category}`}>{attributeObject.currentLevel}</div>
       <p className="levelInfo__summary">{milestone.summary}</p>
       <h4 className="levelInfo__behaviors">Examples behaviors</h4>
       <ul className="levelInfo__behavior-list">
