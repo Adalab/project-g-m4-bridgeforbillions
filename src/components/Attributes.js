@@ -1,13 +1,15 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
 import PropTypes from 'prop-types';
 import './../styles/attributes.css';
 
 const Attributes = (props) => {
   const { careerInfo, getAttributeId } = props;
+  const { Title } = Typography;
+
   return (
     <div className="attributes__container">
-      <h2 className="attributes__title">1: Select an area (TBD)</h2>
+      <Title level={3} className="attributes__title">1: Select an area (TBD)</Title>
       <ul className="attributes__list">
         {careerInfo.map((item) => {
           return (
