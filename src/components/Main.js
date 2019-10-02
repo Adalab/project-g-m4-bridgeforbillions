@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GeneralStatus from './GeneralStatus';
 import EmployeeStatus from './EmployeeStatus';
+import './../styles/main.css';
 
 const Main = (props) => {
   const { attributeObject, getLevelInfo, defaultObject, careerInfo, getAttributeId } = props;
 
   return (
-    <div>
+    <div className="main__container">
       <EmployeeStatus />
       <GeneralStatus
         careerInfo={careerInfo}
