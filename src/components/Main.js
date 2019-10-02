@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GeneralStatus from './GeneralStatus'; 
+import GeneralStatus from './GeneralStatus';
+import EmployeeStatus from './EmployeeStatus';
 
 const Main = (props) => {
   const { attributeObject, getLevelInfo, defaultObject, careerInfo, getAttributeId } = props;
 
   return (
     <div>
-      {/* <EmployeeStatus /> */}
+      <EmployeeStatus />
       <GeneralStatus
         careerInfo={careerInfo}
         getAttributeId={getAttributeId}

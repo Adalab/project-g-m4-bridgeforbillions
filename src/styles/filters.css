@@ -1,0 +1,9 @@
+.filter__input {
+  width: 330px;
+}
+.ant-select-selection--single {
+  width: 330px;
+}
+.filter__label {
+  display: block;
+}

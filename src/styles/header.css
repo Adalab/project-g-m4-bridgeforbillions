@@ -1,0 +1,21 @@
+.header__title {
+    background-color: #123DC6;
+    height: 50px;
+}
+.header__logo {
+    background-image: url('./../images/Bridgeforbillions_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 158px;
+    height: 20px;
+}
+.ant-page-header-heading-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ant-page-header.header__title {
+    padding: 15px 0px;
+}
