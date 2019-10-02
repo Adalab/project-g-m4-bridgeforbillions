@@ -1,0 +1,19 @@
+.attributes__list{
+    list-style: none;
+}
+.ant-btn-background-ghost.ant-btn-primary.button--A{
+    border: 1px solid #5C5CEA;
+    color: #5C5CEA;
+}
+.ant-btn-background-ghost.ant-btn-primary.button--B{
+    border: 1px solid #A8BC3B;
+    color: #A8BC3B;
+}
+.ant-btn-background-ghost.ant-btn-primary.button--C{
+    border: 1px solid #CA1551;
+    color: #CA1551;
+}
+.ant-btn-background-ghost.ant-btn-primary.button--D{
+    border: 1px solid #FDB833;
+    color: #FDB833;
+}
