@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Attributes from './Attributes';
 import Description from './Description';
-import './../styles/generalStatus.css';
 import { Col, Row } from 'antd';
 
 const GeneralStatus = (props) => {

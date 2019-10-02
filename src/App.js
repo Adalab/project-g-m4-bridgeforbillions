@@ -1,5 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import './styles/app.css';
 import careerPath from './services/careerPath';
 import Main from './components/Main';
 import Header from './components/Header';
@@ -59,15 +60,15 @@ class App extends React.Component {
     const attributeObject = careerInfo.find((item) => item.newid === attributeId);
 
     return (
-      <div className="App">
+      <div className="app">
         <Header />
-		<Main 
-			careerInfo={careerInfo}
-			attributeObject={attributeObject}
-			getAttributeId={this.getAttributeId}
-			defaultObject={defaultObject}
-			getLevelInfo={this.getLevelInfo}
-		/>
+        <Main
+          careerInfo={careerInfo}
+          attributeObject={attributeObject}
+          getAttributeId={this.getAttributeId}
+          defaultObject={defaultObject}
+          getLevelInfo={this.getLevelInfo}
+        />
       </div>
     );
   }
