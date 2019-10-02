@@ -1,10 +1,8 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import careerPath from './services/careerPath';
-import Description from './components/Description';
-import Attributes from './components/Attributes';
+import Main from './components/Main';
 import Header from './components/Header';
-import EmployeeStatus from './components/EmployeeStatus';
 
 class App extends React.Component {
   constructor(props) {
@@ -63,17 +61,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <EmployeeStatus />
-        <Attributes
-          careerInfo={careerInfo}
-          attributeObject={attributeObject}
-          getAttributeId={this.getAttributeId}
-        />
-        <Description
-          defaultObject={defaultObject}
-          attributeObject={attributeObject}
-          getLevelInfo={this.getLevelInfo}
-        />
+		<Main 
+			careerInfo={careerInfo}
+			attributeObject={attributeObject}
+			getAttributeId={this.getAttributeId}
+			defaultObject={defaultObject}
+			getLevelInfo={this.getLevelInfo}
+		/>
       </div>
     );
   }

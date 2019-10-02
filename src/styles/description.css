@@ -1,0 +1,53 @@
+/* title */
+.description__title--A{
+    color: #5C5CEA;
+}
+
+.description__title--B{
+    color: #A8BC3B;
+}
+
+.description__title--C{
+    color: #CA1551;
+}
+
+.description__title--D{
+    color: #FDB833;
+}
+
+/* Subtitle description */
+.description__text--A{
+    color: #5C5CEA;
+}
+
+.description__text--B{
+    color: #A8BC3B;
+}
+
+.description__text--C{
+    color: #CA1551;
+}
+
+.description__text--D{
+    color: #FDB833;
+}
+
+.description__level__container--A{
+	border: 1px solid #5C5CEA; 
+	border-radius: 4px;  
+}
+
+.description__level__container--B{
+	border: 1px solid #A8BC3B; 
+	border-radius: 4px; 
+}
+
+.description__level__container--C{
+	border: 1px solid  #CA1551; 
+	border-radius: 4px; 
+}
+
+.description__level__container--D{
+	border: 1px solid #FDB833; 
+	border-radius: 4px; 
+}
