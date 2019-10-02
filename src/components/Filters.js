@@ -8,7 +8,7 @@ const Filters = () => {
       <label className="name__container" htmlFor="name__filter">Your name</label>
       <Input id="name__filter" placeholder="Enter your name" />
 
-      <label className="job__container" htmlFor="job__filter">Your job</label>
+      <label className="job__container" htmlFor="job__filter">Your job title</label>
       <Select
         showSearch
         style={{ width: 200 }}

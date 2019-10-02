@@ -5,7 +5,6 @@ import Description from './components/Description';
 import Attributes from './components/Attributes';
 import Header from './components/Header';
 import EmployeeStatus from './components/EmployeeStatus';
-import Filters from './components/Filters';
 
 class App extends React.Component {
   constructor(props) {
@@ -62,7 +61,6 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <EmployeeStatus />
-        <Filters />
         <Attributes
           careerInfo={careerInfo}
           attributeObject={attributeObject}
