@@ -1,11 +1,14 @@
 import React from 'react';
+import { Typography } from 'antd';
 import { Progress } from 'antd';
 import './../styles/results.css';
 
 const Results = () => {
+  const { Title } = Typography;
+
   return (
     <div className="results__container">
-      <h2 className="results__title">Results</h2>
+      <Title className="results__title" level={1}>Results</Title>
       <div className="points__section">
         <div className="points__container">
           <div className="points__number">##</div>
