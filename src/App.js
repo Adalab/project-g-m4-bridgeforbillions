@@ -9,8 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       careerInfo: [],
-      levelSelected: '',
-      attributeSelected: {},
+      attributeId: '',
       categoryChecked: false,
     };
     this.getAttributeId = this.getAttributeId.bind(this);
@@ -23,9 +22,8 @@ class App extends React.Component {
 
   getAttributeId(event) {
     const currentAttributeId = parseInt(event.currentTarget.id);
-    const attributeObject = this.state.careerInfo.find((item) => item.newid === currentAttributeId);
     this.setState({
-      attributeSelected: attributeObject,
+      attributeId: currentAttributeId,
       categoryChecked: true
     });
   }
@@ -43,25 +41,30 @@ class App extends React.Component {
   }
 
   getLevelInfo(value) {
+    const { careerInfo, attributeId } = this.state;
+    const attributeLevel = careerInfo.find((item) => item.newid === attributeId);
+    attributeLevel.currentLevel = value;
     this.setState({
-      levelSelected: value
+      careerInfo: [...careerInfo]
     });
   }
 
   render() {
-    const { careerInfo, levelSelected, attributeSelected, categoryChecked } = this.state;
+    const { careerInfo, levelSelected, attributeId, categoryChecked } = this.state;
+
+    const attributeObject = careerInfo.find((item) => item.newid === attributeId);
+
     return (
       <div className="App">
         <Attributes
           careerInfo={careerInfo}
-          levelSelected={levelSelected}
+          attributeObject={attributeObject}
           getAttributeId={this.getAttributeId}
         />
         <Description
-          attributeSelected={attributeSelected}
+          attributeObject={attributeObject}
           categoryChecked={categoryChecked}
           getLevelInfo={this.getLevelInfo}
-          levelSelected={levelSelected}
         />
       </div>
     );

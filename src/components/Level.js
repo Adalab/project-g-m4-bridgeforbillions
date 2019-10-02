@@ -14,7 +14,7 @@ const Level = (props) => {
 
   return (
     <div>
-      <Slider marks={marks} value={levelSelected} onChange={getLevelInfo} max={5} />
+      <Slider marks={marks} value={levelSelected || 0} onChange={getLevelInfo} max={5} />
     </div>
   );
 };
