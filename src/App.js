@@ -10,7 +10,6 @@ class App extends React.Component {
     this.state = {
       careerInfo: [],
       attributeId: 1,
-      categoryChecked: false,
       defaultObject: {}
     };
     this.getAttributeId = this.getAttributeId.bind(this);
@@ -52,7 +51,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { careerInfo, attributeId, categoryChecked, defaultObject } = this.state;
+    const { careerInfo, attributeId, defaultObject } = this.state;
 
     const attributeObject = careerInfo.find((item) => item.newid === attributeId);
 
@@ -66,7 +65,6 @@ class App extends React.Component {
         <Description
           defaultObject={defaultObject}
           attributeObject={attributeObject}
-          categoryChecked={categoryChecked}
           getLevelInfo={this.getLevelInfo}
         />
       </div>
