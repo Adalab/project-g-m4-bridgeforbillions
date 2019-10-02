@@ -22,5 +22,7 @@
     border: 1px solid #FDB833;
     color: #FDB833;
 }
-
-
+.ant-typography.attributes__title{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
