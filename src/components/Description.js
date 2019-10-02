@@ -16,7 +16,7 @@ const Description = (props) => {
           <Title className={`description__title--${attributeObject.category}`} level={2}>{attributeObject.displayName}</Title>
           <p className={`description__text--${attributeObject.category}`}>{attributeObject.description}</p>
           <div className={`description__level__container description__level__container--${attributeObject.category}`}>
-            <Level getLevelInfo={getLevelInfo} levelSelected={attributeObject.currentLevel} />
+            <Level className={`level__slider--${attributeObject.category}}`} getLevelInfo={getLevelInfo} levelSelected={attributeObject.currentLevel} />
             <div className="levelInfo">
               {attributeObject.milestones
                 .filter((milstone) => milstone.level.includes(attributeObject.currentLevel))
@@ -34,7 +34,7 @@ const Description = (props) => {
           <Title className={`description__title--${defaultObject.category}`} level={2}>{defaultObject.displayName}</Title>
           <p className={`description__text--${defaultObject.category}`}>{defaultObject.description}</p>
           <div className="description__level__container">
-            <Level getLevelInfo={getLevelInfo} levelSelected={defaultObject.currentLevel} />
+            <Level getLevelInfo={getLevelInfo} className={`level__slider--${defaultObject.category}}`} levelSelected={defaultObject.currentLevel} />
           </div>
         </div>
       )}

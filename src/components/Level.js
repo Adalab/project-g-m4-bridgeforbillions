@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Slider } from 'antd';
+import './../styles/level.css';
 
 const Level = (props) => {
   const { getLevelInfo, levelSelected } = props;
