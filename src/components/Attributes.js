@@ -11,7 +11,7 @@ const Attributes = (props) => {
       <ul className="attributes__list">
         {careerInfo.map((item) => {
           return (
-            <li className="attributes__item" key={item.newid} style={{ padding: '0px 0px 10px 30px' }}>
+            <li className="attributes__item" key={item.newid}>
               <Button id={item.newid} onClick={getAttributeId} className={`button--${item.category}`} type="primary" ghost>{`${item.currentLevel || '##'} | ${item.displayName}`}</Button>
             </li>
           );

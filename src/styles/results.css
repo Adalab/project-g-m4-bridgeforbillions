@@ -1,0 +1,25 @@
+.results__title {
+    margin: 0px;
+}
+.points__section {
+    display: flex;
+    text-align: center;
+}
+.points__container {
+    margin: 10px 30px 10px 0px;
+}
+.points__number {
+    width: 150px;
+    height: 70px;
+    background-color: #D9FFF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage__circle {
+    margin: 30px 30px 30px 0px;
+}
+.percertange__circle:last-child {
+    margin: 30px 0px 30px 0px;
+}
+
