@@ -9,19 +9,12 @@ const Level = (props) => {
     2: 2,
     3: 3,
     4: 4,
-    5: 5,
-    6: {
-      style: {
-        color: '#f50',
-      },
-      max: 5,
-	    dots: true
-    },
+    5: 5
   };
 
   return (
     <div>
-      <Slider marks={marks} value={levelSelected} onChange={getLevelInfo} />
+      <Slider marks={marks} value={levelSelected|| 0} onChange={getLevelInfo} max={5} defaultValue={0}/>
     </div>
   );
 };
