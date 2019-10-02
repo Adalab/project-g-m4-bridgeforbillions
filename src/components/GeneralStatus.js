@@ -2,21 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Attributes from './Attributes';
 import Description from './Description';
+import './../styles/generalStatus.css';
+import { Col, Row } from 'antd';
 
 const GeneralStatus = (props) => {
   const { attributeObject, getLevelInfo, defaultObject, careerInfo, getAttributeId } = props;
 
   return (
-    <div>
-      <Attributes
-        careerInfo={careerInfo}
-        getAttributeId={getAttributeId}
-      />
-      <Description
-        attributeObject={attributeObject}
-        getLevelInfo={getLevelInfo}
-        defaultObject={defaultObject}
-      />
+    <div className="grid__general-status">
+      <Row>
+        <Col span={6}>
+          <Attributes
+            careerInfo={careerInfo}
+            getAttributeId={getAttributeId}
+          />
+        </Col>
+        <Col span={16} offset={2}>
+          <Description
+            attributeObject={attributeObject}
+            getLevelInfo={getLevelInfo}
+            defaultObject={defaultObject}
+          />
+        </Col>
+      </Row>
     </div>
   );
 };
