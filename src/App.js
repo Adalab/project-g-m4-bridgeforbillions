@@ -9,8 +9,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       careerInfo: [],
-      attributeId: '',
+      attributeId: 1,
       categoryChecked: false,
+      defaultObject: {}
     };
     this.getAttributeId = this.getAttributeId.bind(this);
     this.getLevelInfo = this.getLevelInfo.bind(this);
@@ -32,10 +33,11 @@ class App extends React.Component {
     careerPath()
       .then((data) => {
         const newData = data.map((item, index) => {
-          return { ...item, newid: index + 1 };
+          return { ...item, newid: index + 1, currentLevel: 0 };
         });
         this.setState({
-          careerInfo: newData
+          careerInfo: newData,
+          defaultObject: newData[0]
         });
       });
   }
@@ -50,7 +52,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { careerInfo, levelSelected, attributeId, categoryChecked } = this.state;
+    const { careerInfo, attributeId, categoryChecked, defaultObject } = this.state;
 
     const attributeObject = careerInfo.find((item) => item.newid === attributeId);
 
@@ -62,6 +64,7 @@ class App extends React.Component {
           getAttributeId={this.getAttributeId}
         />
         <Description
+          defaultObject={defaultObject}
           attributeObject={attributeObject}
           categoryChecked={categoryChecked}
           getLevelInfo={this.getLevelInfo}

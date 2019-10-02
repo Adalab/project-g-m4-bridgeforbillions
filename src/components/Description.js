@@ -3,7 +3,7 @@ import Level from './Level';
 import LevelInfo from './LevelInfo';
 
 const Description = (props) => {
-  const { attributeObject, categoryChecked, getLevelInfo } = props;
+  const { attributeObject, categoryChecked, getLevelInfo, defaultObject } = props;
   return (
     <div className="description__container">
       {categoryChecked ? (
@@ -15,10 +15,11 @@ const Description = (props) => {
             <Level getLevelInfo={getLevelInfo} levelSelected={attributeObject.currentLevel} />
             <div className="levelInfo">
               {attributeObject.milestones
-                .filter(milstone => milstone.level.includes(attributeObject.currentLevel))
-                .map(milestone => {
+                .filter((milstone) => milstone.level.includes(attributeObject.currentLevel))
+                .map((milestone) => {
                   return (
                     <>
+                      <div className="levelInfo__number">{attributeObject.currentLevel}</div>
                       <p className="levelInfo__summary">{milestone.summary}</p>
                       <h4 className="levelInfo__behaviors">Examples behaviors</h4>
                       <ul className="levelInfo__behavior-list">
@@ -43,17 +44,15 @@ const Description = (props) => {
           </div>
         </div>
       ) : (
-          <>
-            <h3 className="description__subtitle">2: Rank (TBD)</h3>
-            <h2 className="description__title">0</h2>
-            <p className="description__text">You have a lot to learn</p>
-            <div className="description__level__container">
-              <Level getLevelInfo='0' levelSelected='0' />
-            </div>
-          </>
-
-        )}
-
+        <div>
+          <h3 className="description__subtitle">2: Rank (TBD)</h3>
+          <h2 className="description__title">{defaultObject.displayName}</h2>
+          <p className="description__text">{defaultObject.description}</p>
+          <div className="description__level__container">
+            <Level getLevelInfo={getLevelInfo} levelSelected={defaultObject.currentLevel} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
