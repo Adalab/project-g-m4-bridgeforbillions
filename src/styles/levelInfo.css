@@ -13,4 +13,6 @@
 .levelInfo__number--D{
 	color: #FDB833;
 }
-
+.ant-typography.title__h4{
+	font-size: 15px;
+}
