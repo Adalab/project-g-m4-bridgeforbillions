@@ -5,7 +5,7 @@ import Filters from './Filters';
 import Results from './Results';
 
 
-const EmployeeSatatus = () => {
+const EmployeeStatus = () => {
   const { Title } = Typography;
 
   return (
@@ -44,4 +44,4 @@ const EmployeeSatatus = () => {
   );
 };
 
-export default EmployeeSatatus;
+export default EmployeeStatus;

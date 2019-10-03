@@ -10,7 +10,9 @@ const Main = (props) => {
     getLevelInfo,
     defaultObject,
     careerInfo,
-    getAttributeId
+    getAttributeId,
+    isClicked,
+    attributeId
   } = props;
 
   return (
@@ -22,6 +24,8 @@ const Main = (props) => {
         attributeObject={attributeObject}
         getLevelInfo={getLevelInfo}
         defaultObject={defaultObject}
+        isClicked={isClicked}
+        attributeId={attributeId}
       />
     </div>
   );
@@ -32,7 +36,8 @@ Main.propTypes = {
   getLevelInfo: PropTypes.func.isRequired,
   defaultObject: PropTypes.object.isRequired,
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
-  getAttributeId: PropTypes.func.isRequired
+  getAttributeId: PropTypes.func.isRequired,
+  isClicked: PropTypes.bool
 };
 
 export default Main;
