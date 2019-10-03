@@ -23,8 +23,6 @@
     width: 200px;  
 	}
 }
-
-
 .filter__label {
   color: #000;
   display: block;
@@ -33,8 +31,11 @@
   margin-bottom: 10px;  
 }
 .ant-select-selection__rendered {
-	display: flex; 
-	justify-content: center;
-	padding-top: 16px; 
-	font-style: italic; 
+  display: flex;
+  justify-content: center;
+  padding-top: 9px;
+  font-style: italic;
+}
+.ant-select-selection__placeholder, .ant-select-search__field__placeholder {
+  margin-top: -8px;
 }

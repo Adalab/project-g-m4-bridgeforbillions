@@ -2,6 +2,7 @@
   "name": "g-m4-bridgeforbillions",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@ant-design/colors": "^3.2.2",
     "antd": "^3.23.5",
