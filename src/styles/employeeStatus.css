@@ -8,6 +8,7 @@
 .ant-typography.page__title {
     color: #123dc6;
     font-size: 20px;
+    font-weight: bold;
 }
 .description__list {
     font-size: 16px;

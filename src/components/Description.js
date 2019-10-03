@@ -9,7 +9,6 @@ const Description = (props) => {
   const {
     attributeObject,
     getLevelInfo,
-    defaultObject
   } = props;
   const { Title } = Typography;
 
@@ -44,7 +43,6 @@ const Description = (props) => {
 Description.propTypes = {
   attributeObject: PropTypes.object,
   getLevelInfo: PropTypes.func.isRequired,
-  defaultObject: PropTypes.object.isRequired
 };
 
 export default Description;

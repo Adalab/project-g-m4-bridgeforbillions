@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from 'antd';
-import '../styles/levelInfo.css';
+import '../styles/infoLevel.css';
 import PropTypes from 'prop-types';
 
 
