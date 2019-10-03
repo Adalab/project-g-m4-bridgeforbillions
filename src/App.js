@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import './styles/app.css';
 import Header from './components/Header';
 import Main from './components/Main';
+import Footer from './components/Footer';
 import careerPath from './services/careerPath';
 
 class App extends React.Component {
@@ -69,6 +70,7 @@ class App extends React.Component {
           defaultObject={defaultObject}
           getLevelInfo={this.getLevelInfo}
         />
+        <Footer />
       </div>
     );
   }
