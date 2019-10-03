@@ -1,13 +1,10 @@
 .ant-typography.description__subtitle{
     font-size: 15px;
     font-weight: 600px;
+    @media all and (max-width: 768px) {
+        margin-top: 30px;  
+    }
 }
-@media all and (max-width: 768px) {
-	.ant-typography.description__subtitle {
-    margin-top: 30px;  
-	}
-}
-
 /* title */
 .ant-typography.description__title--A{
     color: #5C5CEA;
