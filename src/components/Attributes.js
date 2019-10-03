@@ -4,7 +4,12 @@ import '../styles/attributes.css';
 import PropTypes from 'prop-types';
 
 const Attributes = (props) => {
-  const { careerInfo, getAttributeId, isClicked, attributeId } = props;
+  const {
+    careerInfo,
+    getAttributeId,
+    isClicked,
+    attributeId
+  } = props;
   const { Title } = Typography;
 
   return (
@@ -26,7 +31,8 @@ const Attributes = (props) => {
 Attributes.propTypes = {
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
   getAttributeId: PropTypes.func.isRequired,
-  isClicked: PropTypes.bool
+  isClicked: PropTypes.bool.isRequired,
+  attributeId: PropTypes.number.isRequired
 };
 
 export default Attributes;

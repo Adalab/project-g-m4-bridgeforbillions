@@ -44,7 +44,8 @@ GeneralStatus.propTypes = {
   defaultObject: PropTypes.object.isRequired,
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
   getAttributeId: PropTypes.func.isRequired,
-  isClicked: PropTypes.bool
+  isClicked: PropTypes.bool.isRequired,
+  attributeId: PropTypes.number.isRequired
 };
 
 export default GeneralStatus;
