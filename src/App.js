@@ -1,6 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './styles/app.scss';
+import './styles/utils.scss';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';

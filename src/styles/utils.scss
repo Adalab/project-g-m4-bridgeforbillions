@@ -1,0 +1,10 @@
+$color--A: #5C5CEA;
+$color--B: #A8BC3B;
+$color--C: #CA1551;
+$color--D: #FDB833;
+
+@mixin button (color){
+    border: 1px solid color;
+    color: color;
+    background-color: white;
+}

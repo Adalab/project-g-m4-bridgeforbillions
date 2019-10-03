@@ -20,24 +20,16 @@
 
 /*buttons*/
 .ant-btn.button--A{
-    border: 1px solid #5C5CEA;
-    color: #5C5CEA;
-    background-color: white;
+    @include button ($color--A);
 }
 .ant-btn.button--B{
-    border: 1px solid #A8BC3B;
-    color: #A8BC3B;
-    background-color: white;
+    @include button ($color--B);
 }
 .ant-btn.button--C{
-    border: 1px solid #CA1551;
-    color: #CA1551;
-    background-color: white;
+    @include button ($color--C);
 }
 .ant-btn.button--D{
-    border: 1px solid #FDB833;
-    color: #FDB833;
-    background-color: white;
+    @include button ($color--D);
 }
 
 /*button selected*/
