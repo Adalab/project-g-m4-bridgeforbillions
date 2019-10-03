@@ -8,3 +8,5 @@ Tealify is a web aplication that shows the carreer path of the employees.
  - React using [Create React App](https://github.com/facebook/create-react-app).
  - [Ant Design](https://ant.design).
  - CSS3.
+
+![TealifyScreenShot](./src/images/screen.png)
