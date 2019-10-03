@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from 'antd';
+import { Typography, Empty } from 'antd';
 import '../styles/description.css';
 import PropTypes from 'prop-types';
 import Level from './Level';
@@ -22,6 +22,7 @@ const Description = (props) => {
           <p className={`description__text--${attributeObject.category}`}>{attributeObject.description}</p>
           <div className={`description__level__container description__level__container--${attributeObject.category}`}>
             <Level className={`level__slider--${attributeObject.category}}`} getLevelInfo={getLevelInfo} levelSelected={attributeObject.currentLevel} />
+            {attributeObject.currentLevel === 0 && <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />}
             <div className="levelInfo">
               {attributeObject.milestones
                 .filter((milstone) => milstone.level.includes(attributeObject.currentLevel))
@@ -34,14 +35,7 @@ const Description = (props) => {
           </div>
         </div>
       ) : (
-        <div>
-          <Title className="description__subtitle" level={3}>2: Rank the area (5 levels of expertise)</Title>
-          <Title className={`description__title--${defaultObject.category}`} level={2}>{defaultObject.displayName}</Title>
-          <p className={`description__text--${defaultObject.category}`}>{defaultObject.description}</p>
-          <div className="description__level__container">
-            <Level getLevelInfo={getLevelInfo} className={`level__slider--${defaultObject.category}}`} levelSelected={defaultObject.currentLevel} />
-          </div>
-        </div>
+        <div>Loading...</div>
       )}
     </div>
   );
