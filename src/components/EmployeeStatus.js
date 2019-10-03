@@ -23,7 +23,7 @@ const EmployeeSatatus = () => {
         </Col>
       </Row>
       <Row>
-        <Col span={8}>
+        <Col xs={{ span: 24 }} md={{ span: 8 }}>
           <Filters />
         </Col>
         <Col span={15} offset={1}>

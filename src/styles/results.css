@@ -5,8 +5,8 @@
     margin: 0px;
 }
 .points__section {
-    display: flex;
-    text-align: center;
+    /* display: flex;
+    text-align: center; */
 }
 .points__container {
     margin: 10px 30px 10px 0px;
