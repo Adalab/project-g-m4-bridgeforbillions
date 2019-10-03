@@ -16,13 +16,13 @@ const GeneralStatus = (props) => {
   return (
     <div className="generalStatus__container">
       <Row>
-        <Col span={6}>
+        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 6 }}>
           <Attributes
             careerInfo={careerInfo}
             getAttributeId={getAttributeId}
           />
         </Col>
-        <Col span={16} offset={2}>
+        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 16, offset: 2 }}>
           <Description
             attributeObject={attributeObject}
             getLevelInfo={getLevelInfo}
