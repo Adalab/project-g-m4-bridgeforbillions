@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Col, Row, Progress } from 'antd';
-import '../styles/employeeStatus.css';
+import '../styles/employeeStatus.scss';
 import Filters from './Filters';
 import Results from './Results';
 

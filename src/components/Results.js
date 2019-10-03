@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Progress, Row, Col } from 'antd';
-import '../styles/results.css';
+import '../styles/results.scss';
 
 const Results = () => {
   const { Title } = Typography;

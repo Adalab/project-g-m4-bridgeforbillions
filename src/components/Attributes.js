@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Typography } from 'antd';
-import '../styles/attributes.css';
+import '../styles/attributes.scss';
 import PropTypes from 'prop-types';
 
 const Attributes = (props) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageHeader } from 'antd';
-import '../styles/header.css';
+import '../styles/header.scss';
 
 const Header = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Select, Input } from 'antd';
-import '../styles/filters.css';
+import '../styles/filters.scss';
 
 
 const Filters = () => {

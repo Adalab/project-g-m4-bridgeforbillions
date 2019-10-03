@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/main.css';
+import '../styles/main.scss';
 import PropTypes from 'prop-types';
 import GeneralStatus from './GeneralStatus';
 import EmployeeStatus from './EmployeeStatus';

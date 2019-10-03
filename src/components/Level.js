@@ -1,6 +1,6 @@
 import React from 'react';
 import { Slider } from 'antd';
-import '../styles/level.css';
+import '../styles/level.scss';
 import PropTypes from 'prop-types';
 
 const Level = (props) => {
