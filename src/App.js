@@ -12,7 +12,8 @@ class App extends React.Component {
     this.state = {
       careerInfo: [],
       attributeId: 1,
-      defaultObject: {}
+      defaultObject: {},
+      isClicked: true
     };
 
     this.getAttributeId = this.getAttributeId.bind(this);
@@ -25,10 +26,13 @@ class App extends React.Component {
 
   getAttributeId(event) {
     const currentAttributeId = parseInt(event.currentTarget.id, 10);
+    const { isClicked, attributeId } = this.state;
+
+    const newClicked = (currentAttributeId === attributeId && isClicked) || isClicked;
 
     this.setState({
       attributeId: currentAttributeId,
-      categoryChecked: true
+      isClicked: newClicked
     });
   }
 
@@ -57,7 +61,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { careerInfo, attributeId, defaultObject } = this.state;
+    const { careerInfo, attributeId, defaultObject, isClicked } = this.state;
     const attributeObject = careerInfo.find((item) => item.newid === attributeId);
 
     return (
@@ -69,6 +73,8 @@ class App extends React.Component {
           getAttributeId={this.getAttributeId}
           defaultObject={defaultObject}
           getLevelInfo={this.getLevelInfo}
+          isClicked={isClicked}
+          attributeId={attributeId}
         />
         <Footer />
       </div>

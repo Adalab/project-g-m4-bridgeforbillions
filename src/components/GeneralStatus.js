@@ -10,7 +10,9 @@ const GeneralStatus = (props) => {
     getLevelInfo,
     defaultObject,
     careerInfo,
-    getAttributeId
+    getAttributeId,
+    isClicked,
+    attributeId
   } = props;
 
   return (
@@ -20,6 +22,8 @@ const GeneralStatus = (props) => {
           <Attributes
             careerInfo={careerInfo}
             getAttributeId={getAttributeId}
+            isClicked={isClicked}
+            attributeId={attributeId}
           />
         </Col>
         <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 16, offset: 2 }}>
@@ -39,7 +43,8 @@ GeneralStatus.propTypes = {
   getLevelInfo: PropTypes.func.isRequired,
   defaultObject: PropTypes.object.isRequired,
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
-  getAttributeId: PropTypes.func.isRequired
+  getAttributeId: PropTypes.func.isRequired,
+  isClicked: PropTypes.bool
 };
 
 export default GeneralStatus;
