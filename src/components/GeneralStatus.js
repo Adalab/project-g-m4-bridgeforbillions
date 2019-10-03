@@ -15,7 +15,7 @@ const GeneralStatus = (props) => {
 
   return (
     <div className="generalStatus__container">
-      <Row>
+      <Row className="generalStatus__container">
         <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 6 }}>
           <Attributes
             careerInfo={careerInfo}
