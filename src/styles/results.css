@@ -4,12 +4,22 @@
     font-weight: 600px;
     margin: 0px;
 }
-.points__section {
-    display: flex;
-    text-align: center;
+@media all and (max-width: 768px) {
+	.ant-typography.results__title {
+    margin-top: 30px; 
+	}
 }
+
 .points__container {
-    margin: 10px 30px 10px 0px;
+    margin: 10px 0px 10px 0px;
+}
+@media all and (max-width: 768px) {
+	.points__container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+	align-items: center;  
+	}
 }
 .points__number {
     width: 150px;
@@ -18,16 +28,44 @@
     background-color: #D9FFF1;
     display: flex;
     justify-content: center;
-    align-items: center;
+	align-items: center;
+	margin-right: 0px;  
 }
 .points__subtitle {
 	font-size: 15px;
 	margin-top: 10px; 
 }
+.percentage__section {
+	padding-left: 30px; 
+}
+@media all and (max-width: 768px) {
+	.percentage__section {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+	align-items: center; 
+	padding-left: 0px; 
+	}
+}
+@media all and (max-width: 1024px) {
+	.percentage__section { 
+	padding-left: 0px; 
+	}
+}
 .percentage__circle {
     margin: 30px 30px 30px 0px;
+}
+@media all and (max-width: 768px) {
+	.percentage__circle {
+    margin-right: 0px;  
+	}
 }
 .percertange__circle:last-child {
     margin: 30px 0px 30px 0px;
 }
-
+@media all and (max-width: 768px) {
+	.ant-col-xl-offset-1 {
+    margin-left: 0px;  
+	}
+}
+ 

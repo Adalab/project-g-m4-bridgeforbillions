@@ -23,10 +23,10 @@ const EmployeeSatatus = () => {
         </Col>
       </Row>
       <Row>
-        <Col span={8}>
+        <Col xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 24 }} xl={{ span: 8 }}>
           <Filters />
         </Col>
-        <Col span={15} offset={1}>
+        <Col xs={{ span: 24 }} sm={{ span: 23, offset: 1 }} md={{ span: 24 }} lg={{ span: 22, offset: 2 }} xl={{ span: 15, offset: 1 }}>
           <Results />
         </Col>
       </Row>
