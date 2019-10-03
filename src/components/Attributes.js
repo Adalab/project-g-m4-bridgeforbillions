@@ -1,18 +1,20 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
+import '../styles/attributes.css';
 import PropTypes from 'prop-types';
-import './../styles/attributes.css';
 
 const Attributes = (props) => {
-  const { careerInfo, getAttributeId, attributeObject } = props;
+  const { careerInfo, getAttributeId, isClicked, attributeId } = props;
+  const { Title } = Typography;
+
   return (
     <div className="attributes__container">
-      <h2 className="attributes__title">1: Select an area (TBD)</h2>
+      <Title level={3} className="attributes__title">1: Select an area of expertise</Title>
       <ul className="attributes__list">
         {careerInfo.map((item) => {
           return (
-            <li className="attributes__item" key={item.newid} style={{ padding: '0px 0px 10px 30px' }}>
-              <Button id={item.newid} onClick={getAttributeId} className={`button--${item.category}`} type="primary" ghost>{`${item.currentLevel || '##'} | ${item.displayName}`}</Button>
+            <li className="attributes__item" key={item.newid}>
+              <Button id={item.newid} onClick={getAttributeId} className={`button--${item.category} ${isClicked && (attributeId === item.newid) && 'selected'}`} type="primary">{`${item.currentLevel || '##'} | ${item.displayName}`}</Button>
             </li>
           );
         })}
@@ -21,10 +23,10 @@ const Attributes = (props) => {
   );
 };
 
-
 Attributes.propTypes = {
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
-  levelSelected: PropTypes.string.isRequired
+  getAttributeId: PropTypes.func.isRequired,
+  isClicked: PropTypes.bool
 };
 
-export default Attributes; 
+export default Attributes;

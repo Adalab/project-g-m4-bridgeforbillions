@@ -1,9 +1,40 @@
-.filter__input {
+.filter__input-name {
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  height: 46px;
+  margin:10px 0px 30px 0px;
   width: 330px;
+  font-style: italic;
+}
+@media all and (max-width: 768px) {
+	.filter__input-name {
+    width: 200px;  
+	}
 }
 .ant-select-selection--single {
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  height: 46px;
+  margin:0px 0px 0px 0px;
   width: 330px;
 }
+@media all and (max-width: 768px) {
+	.ant-select-selection--single {
+    width: 200px;  
+	}
+}
+
+
 .filter__label {
+  color: #000;
   display: block;
+  font-size: 15px;
+  font-weight: 600pxS;
+  margin-bottom: 10px;  
+}
+.ant-select-selection__rendered {
+	display: flex; 
+	justify-content: center;
+	padding-top: 16px; 
+	font-style: italic; 
 }

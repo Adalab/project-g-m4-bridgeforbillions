@@ -1,0 +1,37 @@
+.levelInfo__number--A{
+	color: #5C5CEA;   
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+.levelInfo__number--B{
+	color: #A8BC3B;  
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+.levelInfo__number--C{
+	color: #CA1551;
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+.levelInfo__number--D{
+	color: #FDB833;
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 20px;
+}
+.ant-typography.title__h4{
+	font-size: 15px;
+	margin-top: 10px;
+}
+.levelInfo__number__container{
+	display: flex;
+	justify-content: center;
+}
+.levelInfo__summary{
+	margin: 0px;
+	font-weight: bold;
+	color: black;
+}

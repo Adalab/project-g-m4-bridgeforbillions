@@ -1,0 +1,21 @@
+.employeeStatus__container{
+	margin-top: 50px; 
+	margin-bottom: 30px; 
+}
+.page__description__container {
+    margin-bottom:30px;
+}
+.ant-typography.page__title {
+    color: #123dc6;
+    font-size: 20px;
+    font-weight: bold;
+}
+.description__list {
+    font-size: 16px;
+    font-style:italic;
+    margin-top: 10px;
+}
+.employee-status__line{
+	padding-top: 30px; 
+}
+
