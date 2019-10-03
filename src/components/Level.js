@@ -1,10 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Slider } from 'antd';
-import './../styles/level.css';
+import '../styles/level.css';
+import PropTypes from 'prop-types';
 
 const Level = (props) => {
-  const { getLevelInfo, levelSelected } = props;
+  const {
+    getLevelInfo,
+    levelSelected
+  } = props;
   const marks = {
     0: 0,
     1: 1,
@@ -16,7 +19,13 @@ const Level = (props) => {
 
   return (
     <div>
-      <Slider marks={marks} value={levelSelected || 0} onChange={getLevelInfo} max={5} defaultValue={0} />
+      <Slider
+        marks={marks}
+        value={levelSelected || 0}
+        onChange={getLevelInfo}
+        max={5}
+        defaultValue={0}
+      />
     </div>
   );
 };

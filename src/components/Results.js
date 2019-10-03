@@ -1,7 +1,6 @@
 import React from 'react';
-import { Typography } from 'antd';
-import { Progress } from 'antd';
-import './../styles/results.css';
+import { Typography, Progress } from 'antd';
+import '../styles/results.css';
 
 const Results = () => {
   const { Title } = Typography;
@@ -11,15 +10,15 @@ const Results = () => {
       <Title className="results__title" level={1}>Results</Title>
       <div className="points__section">
         <div className="points__container">
-          <div className="points__number">##</div>
+          <div className="points__number">###</div>
           <p className="points__subtitle">Total points</p>
         </div>
         <div className="points__container">
-          <div className="points__number">##</div>
+          <div className="points__number">###</div>
           <p className="points__subtitle">Total points</p>
         </div>
         <div className="points__container">
-          <div className="points__number">##</div>
+          <div className="points__number">###</div>
           <p className="points__subtitle">Points to next level</p>
         </div>
       </div>

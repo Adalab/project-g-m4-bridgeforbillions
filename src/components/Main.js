@@ -1,11 +1,17 @@
 import React from 'react';
+import '../styles/main.css';
 import PropTypes from 'prop-types';
 import GeneralStatus from './GeneralStatus';
 import EmployeeStatus from './EmployeeStatus';
-import './../styles/main.css';
 
 const Main = (props) => {
-  const { attributeObject, getLevelInfo, defaultObject, careerInfo, getAttributeId } = props;
+  const {
+    attributeObject,
+    getLevelInfo,
+    defaultObject,
+    careerInfo,
+    getAttributeId
+  } = props;
 
   return (
     <div className="main__container">
@@ -21,7 +27,7 @@ const Main = (props) => {
   );
 };
 
-GeneralStatus.propTypes = {
+Main.propTypes = {
   attributeObject: PropTypes.object,
   getLevelInfo: PropTypes.func.isRequired,
   defaultObject: PropTypes.object.isRequired,

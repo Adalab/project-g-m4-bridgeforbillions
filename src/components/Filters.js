@@ -1,9 +1,11 @@
 import React from 'react';
-import './../styles/filters.css';
 import { Select, Input } from 'antd';
-const { Option } = Select;
+import '../styles/filters.css';
+
 
 const Filters = () => {
+  const { Option } = Select;
+
   return (
     <div className="filter__container">
       <label className="filter__label" htmlFor="name__filter">Your name</label>
@@ -17,9 +19,15 @@ const Filters = () => {
         id="job__filter"
         className="filter__input-job"
       >
-        <Option value="Job 1">Job 1</Option>
-        <Option value="Job 2">Job 2</Option>
-        <Option value="Job 3">Job 3</Option>
+        <Option value="Graduate">Graduate</Option>
+        <Option value="JuniorFrontEndDeveloper">Junior Front-end Developer</Option>
+        <Option value="JuniorBackEndDeveloper">Junior Back-end Developer</Option>
+        <Option value="IntermediateFullStackDeveloper">Intermediate Full-stack Developer</Option>
+        <Option value="SeniorFullStackDeveloper">Senior Full-stack Developer</Option>
+        <Option value="ScrumMaster">Scrum Master</Option>
+        <Option value="ProductManager">Product Manager</Option>
+        <Option value="SystemsAdmin">Systems Admin</Option>
+        <Option value="DevOps">DevOps</Option>
       </Select>
     </div>
   );

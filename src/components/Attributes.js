@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Typography } from 'antd';
+import '../styles/attributes.css';
 import PropTypes from 'prop-types';
-import './../styles/attributes.css';
 
 const Attributes = (props) => {
   const { careerInfo, getAttributeId } = props;
@@ -9,7 +9,7 @@ const Attributes = (props) => {
 
   return (
     <div className="attributes__container">
-      <Title level={3} className="attributes__title">1: Select an area (TBD)</Title>
+      <Title level={3} className="attributes__title">1: Select an area of expertise</Title>
       <ul className="attributes__list">
         {careerInfo.map((item) => {
           return (
@@ -22,7 +22,6 @@ const Attributes = (props) => {
     </div>
   );
 };
-
 
 Attributes.propTypes = {
   careerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,

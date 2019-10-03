@@ -1,9 +1,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './styles/app.css';
-import careerPath from './services/careerPath';
-import Main from './components/Main';
 import Header from './components/Header';
+import Main from './components/Main';
+import careerPath from './services/careerPath';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   getAttributeId(event) {
-    const currentAttributeId = parseInt(event.currentTarget.id);
+    const currentAttributeId = parseInt(event.currentTarget.id, 10);
 
     this.setState({
       attributeId: currentAttributeId,
